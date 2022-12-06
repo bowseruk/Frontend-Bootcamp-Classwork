@@ -1,0 +1,38 @@
+header {
+  width: 100%;
+  background-color: lightblue;
+}
+
+h2 {
+  text-align: left;
+}
+
+ul {
+  text-align: right;
+  color: #ffffff;
+}
+
+li {
+  list-style-type: none;
+  font-size: 40px;
+}
+
+img {
+  margin: 0 auto;
+}
+
+#item-1 {
+  background-color: #e0115f;
+}
+
+#item-2 {
+  background-color: #0000ff;
+}
+
+#item-3 {
+  background-color: #999900;
+}
+
+#image-3 {
+  display: none;
+}
