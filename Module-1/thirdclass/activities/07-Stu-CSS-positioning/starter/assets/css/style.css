@@ -39,3 +39,7 @@ header {
   position: relative;
 }
 
+#relative-box-2{
+  position: relative;
+  left: 200px
+}
