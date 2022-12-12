@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-gb">
+<!--Below we have the head which contains all of the meta data for the browser to read the page-->
 
 <head>
     <meta charset="UTF-8" />
@@ -7,47 +8,56 @@
     <title>Horiseon Marketing Company Website</title>
 </head>
 
+<!--Below we have the body of the webpage with the associated nested elements-->
 <body>
-    <header class="header">
+    <header>
         <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
+        <nav>
             <ul>
                 <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
+                    <a href="#seo">Search Engine Optimization</a>
                 </li>
                 <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
+                    <a href="#orm">Online Reputation Management</a>
                 </li>
                 <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
+                    <a href="#smm">Social Media Marketing</a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <section class="hero"></section>
-    <section class="content">
+
+    <!--Below we have the main webpage image-->
+    <section>
+        <img class="hero"/>
+    </section>
+
+<!--Below is the main content of the page-->
+    <section class="main-content">
         <article class="search-engine-optimization">
-            <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt="notepad on a wooden table, with SEO written on it"/>
+            <img src="./assets/images/search-engine-optimization.jpg" id="seo" class="seo-marketing-images" alt="notepad on a wooden table, with SEO written on it"/>
             <h2>Search Engine Optimization</h2>
             <p>
                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
             </p>
         </article>
-        <article id="online-reputation-management" class="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" class="float-right" alt="someone looking at a laptop with 'reputation' written on the screen"/>
+        <article class="online-reputation-management">
+            <img src="./assets/images/online-reputation-management.jpg" id="orm" class="rep-management-image" alt="someone looking at a laptop with 'reputation' written on the screen"/>
             <h2>Online Reputation Management</h2>
             <p>
                 The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
             </p>
         </article>
-        <article id="social-media-marketing" class="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left"  alt="a birds eye view of a busy work table with many colorful icons of various social media applications" />
+        <article class="social-media-marketing">
+            <img src="./assets/images/social-media-marketing.jpg" id="smm" class="seo-marketing-images"  alt="a birds eye view of a busy work table with many colorful icons of various social media applications" />
             <h2>Social Media Marketing</h2>
             <p>
                 Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
             </p>
         </article>
     </section>
+
+<!--Below is the secondary content of the page, shown to the right side-->
     <section class="benefits">
         <article class="benefit-lead">
             <h3>Lead Generation</h3>
@@ -71,6 +81,8 @@
             </p>
         </article>
     </section>
+
+    <!--Below is the footer with additional company information-->
     <footer class="footer">
         <h4>Made with ❤️️ by Horiseon</h4>
         <p>
