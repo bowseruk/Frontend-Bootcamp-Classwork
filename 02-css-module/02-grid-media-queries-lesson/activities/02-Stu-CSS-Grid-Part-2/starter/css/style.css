@@ -55,8 +55,67 @@ body {
 
 /* Category Grid CSS */
 
+.subHeading {
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+  margin: 50px auto;
+}
 
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "bookcases bedroom patio"
+  "couches couches patio"
+  "desks desks desks";
+}
 
+#bookcases {
+  grid-area: bookcases;
+  background-image: url(../images/bookcases.png);
+}
+
+#bedroom {
+  grid-area: bedroom;
+  background-image: url(../images/beds.png);
+}
+
+#patio {
+  grid-area: patio;
+  background-image: url(../images/patio.png);
+}
+
+#couches {
+  grid-area: couches;
+  background-image: url(../images/couch.png);
+}
+
+#desks {
+  grid-area: desks;
+  background-image: url(../images/desks.png);
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #FF6200
+}
 
 /* Navigation CSS */
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */

@@ -8,8 +8,8 @@ body {
   display: grid;
   min-height: 500px;
   height: 70vh;
-  grid-template-rows: 3fr 1fr;
-  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 75% 25%;
+  grid-template-columns: 75% 25%;
   grid-template-areas:
     "featuredProduct secondaryProduct"
     "featuredProduct CTA";
@@ -46,7 +46,7 @@ body {
   position: absolute;
   top: 17%;
   right: -9%;
-  border: 5px solid #FF6200;
+  border-bottom: 5px solid #FF6200;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 5;
   padding: 30px 20px;
