@@ -75,27 +75,27 @@ body {
 
 #bookcases {
   grid-area: bookcases;
-  background-image: url(../images/bookcases.png);
+  background-image: url("../images/bookcases.png");
 }
 
 #bedroom {
   grid-area: bedroom;
-  background-image: url(../images/beds.png);
+  background-image: url("../images/beds.png");
 }
 
 #patio {
   grid-area: patio;
-  background-image: url(../images/patio.png);
+  background-image: url("../images/patio.png");
 }
 
 #couches {
   grid-area: couches;
-  background-image: url(../images/couch.png);
+  background-image: url("../images/couch.png");
 }
 
 #desks {
   grid-area: desks;
-  background-image: url(../images/desks.png);
+  background-image: url("../images/desks.png");
 }
 
 .categoryGridArea {
