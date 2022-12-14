@@ -5,15 +5,18 @@
   color: white;
 }
 .flex {
+  display: flex;
   padding: 10px;
   margin: 10px;
   /* Set the property display to flex below! */
 }
 #column {
+  flex-direction: column;
   background-color: #E6F5FF;
   /* Set the property flex direction to column below! */
 }
 #row {
+  flex-direction: row;
   background-color: #FFF7DE;
 /* Set the property flex-direction to row below! */
 }
