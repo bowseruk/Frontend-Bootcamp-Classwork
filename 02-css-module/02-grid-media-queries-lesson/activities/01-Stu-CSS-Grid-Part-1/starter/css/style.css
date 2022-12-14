@@ -3,12 +3,51 @@ body {
 }
 
 /* Grid CSS */
-
+#heroGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
+}
 
 /* Category Grid CSS */
+#featuredProduct {
+  grid-area: 1 / 1 / 3 / 2;
+  background-image: url(../images/furniture1.png);
+}
 
+#secondaryProduct {
+  grid-area: 1 / 2 / 2 / 3;
+  background-image: url(../images/furniture2.png);
+}
 
+#CTA {
+  grid-area: 2 / 2 / 3 / 3;
+  background-image: url(../images/woodbg.png);
+  justify-content: 0px 5%;
+  cursor: pointer;
+}
 
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+#headline {
+  position: absolute;
+  top: 17%;
+  right: -9%;
+  border: 5px solid #FF6200;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  padding: 30px 20px;
+}
 
 /* Navigation CSS */
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
