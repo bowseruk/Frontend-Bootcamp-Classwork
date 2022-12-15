@@ -1,0 +1,145 @@
+body {
+    background-color: #2e3035;
+    --pink-color: rgb(232,102,236);
+    color: var(--pink-color);
+    width: 100%;
+    font-family: sans-serif;
+}
+
+/* Footer */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+header p {
+    color: white;
+    text-align: center;
+    width: 75%;
+    margin: 5px 5px 40px 5px;
+}
+
+/* Grid Display */
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "flexboxRow flexboxColumn cssGridLayout"
+    "linearGradients boxTransitionGlow overlayCard";
+    flex-wrap: wrap;
+}
+
+#flexboxRow {
+    grid-area: flexboxRow;
+}
+
+#flexboxColumn {
+    grid-area: flexboxColumn;
+}
+
+#cssGridLayout {
+    grid-area: cssGridLayout;
+}
+
+#linearGradients {
+    grid-area: linearGradients;
+}
+
+#boxTransitionGlow {
+    grid-area: boxTransitionGlow;
+}
+
+#overlayCard {
+    grid-area: overlayCard;
+}
+
+.cssArticle {
+    border: 1px dashed white;
+    margin: 20px 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: -45px;
+    background-color: #333334;
+    border: white solid 1px;
+    border-radius: 5px;
+    position: relative;
+    top: -48px;
+    width: 90%;
+    padding: 5px;
+}
+
+.cssContent {
+    width: 100%;
+}
+
+.blurb {
+    width: 100%;
+    text-align: left;
+}
+
+.cssArticle, .title {
+    transition: all 0.5s ease-in-out;
+}
+
+.code {
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+    border-radius: 8px;
+    padding: 5px;
+    width: 95%;
+    text-align: left center;
+    flex-grow: 1;
+    user-select: all;
+    color: white;
+}
+
+.cssArticle:hover, .cssArticle:hover .title {
+    box-shadow: inset 0 0 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 40px 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) { 
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "flexboxRow flexboxColumn"
+        "cssGridLayout linearGradients"
+        "boxTransitionGlow overlayCard";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+        "flexboxRow"
+        "flexboxColumn"
+        "cssGridLayout"
+        "linearGradients"
+        "boxTransitionGlow"
+        "overlayCard";
+    }
+}

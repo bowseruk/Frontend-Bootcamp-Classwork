@@ -1,9 +1,14 @@
+
+
 body {
   font-size: 16px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
+  /* Common color */
+  --common-color: #fff;
+  --border-radius: 50px;
 }
 
 h1 {
@@ -20,7 +25,7 @@ header {
   padding: 40px;
   text-align: center;
   background: #13293d;
-  color: #fff;
+  color: var(--common-color);
 }
 
 nav {
@@ -36,7 +41,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #fff;
+  background-color: var(--common-color);
 }
 
 main {
@@ -50,13 +55,13 @@ footer {
   padding: 20px;
   text-align: center;
   background: #13293d;
-  color: #fff;
+  color: var(--common-color);
   margin-top: auto;
 }
 
 .products {
   flex: 1;
-  background-color: #fff;
+  background-color: var(--common-color);
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -66,7 +71,7 @@ footer {
 .card {
   border-style: solid;
   border-width: 1px;
-  border-radius: 50px;
+  border-radius: var(--border-radius);
   padding: 10px;
   flex: 0 0 300px;
   transform: rotate(8deg);
@@ -75,7 +80,7 @@ footer {
 }
 
 .card > header {
-  border-radius: 50px 50px 0px 0px;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   padding: 20px;
 }
 
@@ -86,6 +91,8 @@ footer {
 .card > img {
   width: 100%;
 }
+
+
 
 @media screen and (max-width: 768px) {
   main,
