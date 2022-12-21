@@ -12,3 +12,72 @@ footer {
 .card {
   margin: 0 auto;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+}
+
+p {
+  font-family: 'Jura', sans-serif;
+}
+
+.customNav {
+  position: fixed;
+  width: 100%;
+  background: url("../images/transparency.png");
+  background-color: transparent !important;
+  background-size: cover;
+  z-index: 10;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: 0 !important;
+}
+
+.navbar-brand img {
+  padding-right: 15px;
+  width: 65px;
+}
+
+.nav-item {
+  margin: 0px 15px;
+}
+
+.dropdown-menu {
+  background: url(../images/transparency.png);
+  background-color: transparent !important;
+  background-size: cover;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background: black;
+}
+
+.customNav a {
+  color: white !important;
+}
+
+.navCTA {
+  font-size: 15px;
+}
+
+.rockBackground {
+  background-image: url(../images/rockOn_dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: max(500px, calc(100vh - 25px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumboCopy {
+  width: 70%;
+  min-width: 500px;
+  max-width: 700px;
+  color: white;
+  text-align: center;
+}
