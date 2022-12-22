@@ -9,14 +9,14 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Anton|Jura&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton%7CJura&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link hreg="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
   <!-- Custom styles for this template -->
@@ -25,35 +25,44 @@
   <title>Travel California</title>
 </head>
 
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="mainNavigation" id="mainNav">
-    <div class="container">
-      <a class="" href="">Travel California</a>
+<body>
+  <header class="masthead">
+    <nav class="navbar navbar-expand-sm justify-content-start" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" id="cali-brand" href="#">Travel California</a>
+      </div>
       <div>
-        <ul>
-          <li><a href="#download">Download</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link top-link" href="#">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link top-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link top-link" href="#">Contact</a>
+          </li>
         </ul>
       </div>
+    </nav>
 
-    </div>
-  </nav>
+    <!-- Hero Section -->
 
-  <!-- Hero Section -->
-  <header class="masthead">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-7">
-          <h1>Download the Travel California app and explore California today!</h1>
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-center" id="hero-blurb">
+          <div class="col-lg-8 mx-auto d-flex flex-column justify-content-center">
+            <h1>Download the <b>Travel California</b> App and explore California today!</h1>
+            <hr>
+            <hr>
+            <button class="text-uppercase" id="masthead-button">START NOW FOR FREE!</button>
+          </div>
         </div>
         <div class="col-lg-5">
-          <div class="device-container">
+          <div class="device-container d-flex justify-content-center align-items-center">
             <div class="device"></div>
             <div class="screen"></div>
-            <img src="images/demo-screen-1 1.png">
+            <img src="images/demo-screen-1.png" alt="Phone with app on screen">
           </div>
         </div>
       </div>
@@ -62,14 +71,14 @@
 
   <!-- Download Section -->
   <section class="download" id="download">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 mx-auto">
           <h2 class="section-heading">Discover what all the buzz is about!</h2>
           <p>Our app is available on any mobile device! Download now to get started!</p>
-          <div class="badges">
-            <img src="images/google-play-badge.png" />
-            <img src="images/app-store-badge.png" />
+          <div class="badges d-flex justify-content-center align-items-center flex-wrap">
+            <img src="images/google-play-badge.png" alt="Google Play"/>
+            <img src="images/app-store-badge.png" alt="Apple App Store"/>
           </div>
         </div>
       </div>
@@ -82,22 +91,22 @@
       <h2>What people are saying...</h2>
       <div class="row">
         <div class="col-lg-4">
-          <div class="testimonial-item">
-            <img src="images/testimonials-1.jpg" />
+          <div class="testimonial-item d-flex flex-column justify-content-center align-items-center flex-wrap">
+            <img src="images/testimonials-1.jpg" alt="Portrait"/>
             <h5>Margret E.</h5>
             <p>"This is fantastic! Thanks so much guys!"</p>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="testimonial-item">
-            <img src="images/testimonials-2.jpg" />
+          <div class="testimonial-item d-flex flex-column justify-content-center align-items-center flex-wrap">
+            <img src="images/testimonials-2.jpg" alt="Portrait"/>
             <h5>Sarah S.</h5>
             <p>"Travel California is amazing. I've been using it to explore lots of super nice national parks."</p>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="testimonial-item">
-            <img src="images/testimonials-3.jpg" />
+          <div class="testimonial-item d-flex flex-column justify-content-center align-items-center flex-wrap">
+            <img src="images/testimonials-3.jpg" alt="Portrait"/>
             <h5>Fred W.</h5>
             <p>"Thanks so much for making these free resources available to us!"</p>
           </div>
@@ -110,12 +119,12 @@
   <section class="signup-section" id="signup">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 mx-auto">
           <i></i>
           <h2>Subscribe to recieve updates!</h2>
-          <form>
-            <input>
-            <button>Subscribe.</button>
+          <form class="d-flex justify-content-center align-items-center">
+            <input placeholder="ENTER EMAIL ADDRESS...">
+            <button>Subscribe</button>
           </form>
         </div>
 
@@ -129,7 +138,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <i></i>
               <h4 class="text-uppercase">Address</h4>
               <div>4923 Market Street,<br />Sacramento, CA</div>
@@ -138,7 +147,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <i></i>
               <h4 class="text-uppercase">Email</h4>
               <div><a href="mailto:hello@california.com">hello@california.com</a></div>
@@ -147,7 +156,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <i></i>
               <h4 class="text-uppercase">Phone</h4>
               <div>1 (800) CALI-FORNIA</div>
@@ -155,10 +164,10 @@
           </div>
         </div>
       </div>
-      <div class="social">
-        <a><i></i></a>
-        <a><i></i></a>
-        <a><i></i></a>
+      <div class="social d-flex justify-content-center align-items-center">
+        <a href="#"><i class="fa fa-twitter fa-3x"></i></a>
+        <a href="#"><i class="fa fa-facebook fa-3x"></i></a>
+        <a href="#"><i class="fa fa-github fa-3x"></i></a>
       </div>
     </div>
   </section>
