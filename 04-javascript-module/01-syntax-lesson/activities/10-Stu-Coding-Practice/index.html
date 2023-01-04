@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Calculator</title>
+</head>
+
+<body>
+  
+  <h1 style="text-align:center;">Fill in the form to make the calculation happen</h1>  
+  <form>
+    <fieldset>
+        <legend>Player 1 cost (£)</legend>
+        <input id="player1" type="number" oninput="getValues()"/>
+    </fieldset>
+    <fieldset>
+        <legend>Player 2 cost (£)</legend>
+        <input id="player2" type="number" oninput="getValues()"/ />
+    </fieldset>
+    <fieldset>
+        <legend>Player 3 cost (£)</legend>
+        <input id="player3" type="number" oninput="getValues()"/>
+    </fieldset>
+    <fieldset>
+        <legend>Total player cost (£)</legend>
+        <input id="playerTotal" type="number" disabled="true">
+    </fieldset>
+    <fieldset>
+        <legend>Tax Floor (£)</legend>
+        <input id="taxFloor" type="number" value="40000000" oninput="getValues()"/>
+    </fieldset>
+    <fieldset>
+        <legend>Tax Rate (%)</legend>
+        <input id="taxRate" type="number" value="18" oninput="getValues()"/>
+    </fieldset>
+    <fieldset>
+        <legend>Tax Cost (£)</legend>
+        <input id="taxCost" type="number" disabled="true">
+    </fieldset>
+  </form>
+  <script src="luxury.js"></script>
+
+</body>
+</html>
