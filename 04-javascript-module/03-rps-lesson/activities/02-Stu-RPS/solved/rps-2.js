@@ -7,15 +7,10 @@ var losses = 0;
 var ties = 0;
 
 for (var i = 0; i < 10; i++) {
-
-
   // Collect the user's response and convert to lower case.
   var userGuess = prompt("Enter r, p, or s to play!");
   userGuess = userGuess.toLowerCase();
 
   // Test if it's working correctly
   console.log(userGuess);
-
-
 }
-
