@@ -1,23 +1,24 @@
-var site1El = document.querySelector(".site1");
-var site2El = document.querySelector(".site2");
-var site3El = document.querySelector(".site3");
+var siteEl = [document.querySelector(".site1"), document.querySelector(".site2"), document.querySelector(".site3")];
+var siteElHref = ["https://google.com", "https://twitter.com", "https://instagram.com"];
+var siteImgAlt = ["man working", "group brainstorm", "women working"];
 
-site1El.children[0].textContent = "Site 1";
-site1El.children[1].setAttribute("href", "https://google.com");
-site1El.children[1].children[0].setAttribute("src", "assets/images/image_1.jpg");
-site1El.children[1].children[0].setAttribute("alt", "man working");
-site1El.children[1].children[0].setAttribute("style", "padding:10px;");
-
-site2El.children[0].textContent = "Site 2";
-site2El.children[1].setAttribute("href", "https://twitter.com");
-site2El.children[1].children[0].setAttribute("src", "assets/images/image_2.jpg");
-site2El.children[1].children[0].setAttribute("alt", "group brainstorm");
-site2El.children[1].children[0].setAttribute("style", "padding:10px;");
-
-site3El.children[0].textContent = "Site 3";
-site3El.children[1].setAttribute("href", "https://instagram.com");
-site3El.children[1].children[0].setAttribute("src", "assets/images/image_3.jpg");
-site3El.children[1].children[0].setAttribute("alt", "women working");
-site3El.children[1].children[0].setAttribute("style", "padding:10px;");
+// Changed below to reduce replication
+for (let i = 0; i < siteEl.length; i++) {
+    siteEl[i].children[0].textContent = `Site ${i + 1}`;
+    siteEl[i].children[1].setAttribute("href", siteElHref[i]);
+    siteEl[i].children[1].children[0].setAttribute("src", `assets/images/image_${i + 1}.jpg`);
+    siteEl[i].children[1].children[0].setAttribute("alt", siteImgAlt[i]);
+    siteEl[i].children[1].children[0].setAttribute("style", "padding:10px;");
+}
 
 // Write Your Code Below
+// Array of H4 objects
+h4 = document.querySelectorAll("h4");
+// For loop to set the style for each of the headers
+h4.forEach((element) => {
+    element.style.color = "blue";
+    element.style.fontSize = "30px";
+    element.style.fontWeight = "bold";
+    element.style.paddingLeft = "10px";
+    element.style.margin = 0;
+});

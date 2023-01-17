@@ -13,8 +13,16 @@ function countdown() {
     //
     // YOUR CODE HERE
     //
-  });
-}
+    timerEl.textContent = `${timeLeft} seconds remaining`;
+    
+    if(timeLeft === 0) {
+      clearInterval(timeInterval);
+      timerEl.textContent = "";
+      displayMessage();
+    };
+    timeLeft--;
+  }, 1000);
+};
 
 // Displays the message one word at a time
 function displayMessage() {
@@ -30,8 +38,8 @@ function displayMessage() {
       // Display one word of the message
       mainEl.textContent = words[wordCount];
       wordCount++;
-    }
+    };
   }, 1000);
-}
+};
 
 countdown();
