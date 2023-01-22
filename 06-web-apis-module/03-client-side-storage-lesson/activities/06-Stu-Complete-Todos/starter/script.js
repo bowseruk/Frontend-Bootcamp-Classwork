@@ -5,7 +5,16 @@ var todoCountSpan = document.querySelector("#todo-count");
 
 var todos = ["Learn HTML", "Learn CSS", "Learn JavaScript"];
 
-renderTodos();
+init();
+
+function init() {
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  renderTodos();
+}
 
 function renderTodos() {
   // Clear todoList element and update todoCountSpan
@@ -17,13 +26,22 @@ function renderTodos() {
     var todo = todos[i];
 
     var li = document.createElement("li");
+    li.dataset.index = i;
+    var button = document.createElement("button");
+    button.textContent = "complete";
+    button.addEventListener("click", function (event) {
+      todos.splice(this.parentElement.dataset.index, 1)
+      localStorage.setItem("todos", JSON.stringify(todos));
+      renderTodos()
+    })
     li.textContent = todo;
+    li.appendChild(button);
     todoList.appendChild(li);
   }
 }
 
 // When form is submitted...
-todoForm.addEventListener("submit", function(event) {
+todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   var todoText = todoInput.value.trim();
@@ -35,6 +53,7 @@ todoForm.addEventListener("submit", function(event) {
 
   // Add new todoText to todos array, clear the input
   todos.push(todoText);
+  localStorage.setItem("todos", JSON.stringify(todos));
   todoInput.value = "";
 
   // Re-render the list

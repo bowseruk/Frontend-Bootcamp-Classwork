@@ -28,23 +28,26 @@ function navigate(direction) {
 
 // TODO: Describe the functionality of the following event listener.
 carousel.addEventListener("click", function() {
+  // Adds a link to the image
   window.location.href = images[index];
 });
 
 // TODO: Describe the functionality of the following event listener.
 next.addEventListener("click", function(event) {
   // TODO: What is the purpose of the following line of code?
+  // Stops the event from propogating
   event.stopPropagation();
-
+  // Changes the picture
   navigate(1);
 });
 
 // TODO: Describe the functionality of the following event listener.
 prev.addEventListener("click", function(event) {
     // TODO: What would happen if we didn't add the following line of code?
+    // Prevents the event from propogating to the other functions
   event.stopPropagation();
-
+  // Changes the pcture
   navigate(-1);
 });
-
+// Start with the first picture
 navigate(0);

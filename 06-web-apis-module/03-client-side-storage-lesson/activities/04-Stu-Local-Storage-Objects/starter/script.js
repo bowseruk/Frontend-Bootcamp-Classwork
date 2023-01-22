@@ -14,17 +14,28 @@ function displayMessage(type, message) {
   msgDiv.setAttribute("class", type);
 }
 
-signUpButton.addEventListener("click", function(event) {
+// create user object from submission
+function displayUserDetails() {
+  // get most recent submission
+  if (localStorage.getItem("user") === null) {
+    return
+  }
+  var lastUser = JSON.parse(localStorage.getItem("user"));
+  // Parse changes back
+  userFirstNameSpan.textContent = lastUser.firstName;
+  userLastNameSpan.textContent = lastUser.lastName;
+  userEmailSpan.textContent = lastUser.email;
+  userPasswordSpan.textContent = lastUser.password;
+}
+
+signUpButton.addEventListener("click", function (event) {
   event.preventDefault();
-  
-  // create user object from submission
   var user = {
     firstName: firstNameInput.value.trim(),
     lastName: lastNameInput.value.trim(),
     email: emailInput.value.trim(),
     password: passwordInput.value.trim()
   };
-  
   // validate the fields
   if (user.firstName === "") {
     displayMessage("error", "First name cannot be blank");
@@ -36,16 +47,11 @@ signUpButton.addEventListener("click", function(event) {
     displayMessage("error", "Password cannot be blank");
   } else {
     displayMessage("success", "Registered successfully");
+    // Stringify converts
+    localStorage.setItem("user", JSON.stringify(user));
+    displayUserDetails()
 
-    // set new submission
-    console.log(user);
-    localStorage.setItem("user", user);
-    
-    // get most recent submission
-    var lastUser = localStorage.getItem("user");
-    userFirstNameSpan.textContent = lastUser.firstName;
-    userLastNameSpan.textContent = lastUser.lastName;
-    userEmailSpan.textContent = lastUser.email;
-    userPasswordSpan.textContent = lastUser.password;
   }
 });
+
+displayUserDetails()

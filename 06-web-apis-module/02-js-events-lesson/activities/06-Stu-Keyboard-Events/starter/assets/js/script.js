@@ -1,5 +1,8 @@
 function keydownAction(event) {
   // TODO: Complete keydown function
+  document.getElementById("key").textContent = event.key
+  document.getElementById("code").textContent = event.code
+  document.getElementById("status").textContent =  "KEYDOWN Event"
 }
 
 function keyupAction() {
@@ -9,3 +12,4 @@ function keyupAction() {
 document.addEventListener("keyup", keyupAction);
 // TODO: Add Event Listener for "keydown" event
 
+document.addEventListener("keydown", keydownAction)
