@@ -66,3 +66,14 @@ $(function () {
 
 // Add interaction here
 //
+$(function () {
+  $('#skills-list').sortable({
+    placeholder: function(element) {
+        return element.clone().css({
+            "opacity": 0.3,
+            "border": "1px dashed #000000"
+        });
+    }});
+
+  $('#skills-list').disableSelection();
+});

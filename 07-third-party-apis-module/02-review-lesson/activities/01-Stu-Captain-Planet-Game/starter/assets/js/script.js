@@ -17,7 +17,7 @@
 
     // Size Buttons
     $(".normal-button").on("click", function() {
-      captainPlanet.animate({ height: "300px" });
+      captainPlanet.animate({ height: "300px", width: "400px" });
     });
     $(".grow-button").on("click", function() {
       captainPlanet.animate({ height: "500px" });
@@ -25,6 +25,10 @@
     $(".shrink-button").on("click", function() {
       captainPlanet.animate({ height: "100px" });
     });
+    $(".stretch-button").on("click", function() {
+      captainPlanet.animate({ height: "350px", width: "160px" });
+    });
+    
 
     // Visibility Buttons
     $(".vis-button").on("click", function() {
