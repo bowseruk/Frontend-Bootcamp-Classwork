@@ -13,7 +13,7 @@ imageContainer.addEventListener("click", function(event) {
       // Change the data-state attribute's value
       // There are two different ways this attribute can be set
       element.dataset.state = "animate";
-      element.setAttribute("state", "animate");
+      element.setAttribute("data-state", "animate");
 
       // Update the image's source to the string being stored in the data-animate attribute
       element.setAttribute("src", element.dataset.animate);
