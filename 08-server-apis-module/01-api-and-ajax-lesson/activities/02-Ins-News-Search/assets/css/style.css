@@ -1,0 +1,19 @@
+* {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+.panel-body{
+    padding: 35px;
+}
+.panel-heading{
+    background-color: rgb(55, 54, 54) !important;
+    border-color: rgb(55, 54, 54) !important;
+}
+.panel-primary{
+    border-color: rgb(55, 54, 54) !important;
+}
+
+.articleNumber{
+    
+}

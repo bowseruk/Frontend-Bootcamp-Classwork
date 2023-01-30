@@ -1,5 +1,5 @@
   // JavaScript function that wraps everything
-  $(document).ready(function() {
+  // $(document).ready(function() {
 
     var captainPlanet = $(".captain-planet");
 
@@ -20,7 +20,7 @@
       captainPlanet.animate({ height: "300px" });
     });
     $(".grow-button").on("click", function() {
-      captainPlanet.animate({ height: "500px" });
+      captainPlanet.animate({ height: "+=25px" });
     });
     $(".shrink-button").on("click", function() {
       captainPlanet.animate({ height: "100px" });
@@ -79,4 +79,4 @@
         break;
       }
     });
-  });
+  // });

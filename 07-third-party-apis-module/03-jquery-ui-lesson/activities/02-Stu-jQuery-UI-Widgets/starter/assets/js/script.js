@@ -15,6 +15,8 @@ var handleFormSubmit = function (event) {
 
   var nameInput = nameInputEl.val();
   var dateInput = dateInputEl.val();
+  // console.log($("#datepicker").val());
+  console.log(document.querySelector("#datepicker").valueAsDate);
 
   if (!nameInput || !dateInput) {
     console.log('You need to fill out the form!');
@@ -30,7 +32,9 @@ var handleFormSubmit = function (event) {
 formEl.on('submit', handleFormSubmit);
 
 // Add Autocomplete widget here
-//
+let tags = ["one", "two", "three", "four", "five"];
+$("#skill-name").autocomplete({source: tags});
+
 
 // Add Datepicker widget here
-//
+// $("#datepicker").datepicker();
