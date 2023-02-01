@@ -1,7 +1,7 @@
 $("button").on("click", function() {
   var animal = $(this).attr("data-animal");
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+    animal + "&api_key=NJRTjUwB961UtondT1ugXEQlYQaT4H9k&limit=10";
 
   $.ajax({
     url: queryURL,
@@ -14,12 +14,12 @@ $("button").on("click", function() {
 
     // Step 2: since the image information is inside of the data key,
     // make a variable named results and set it equal to response.data
-
+    
     // =============== put step 2 in between these dashes ==================
-
+let results = response.data
     // ========================
 
-    // for (var i = 0; i < results.length; i++) {
+    for (var i = 0; i < results.length; i++) {
 
     // Step 3: uncomment the for loop above and the closing curly bracket below.
     // Make a div with jQuery and store it in a variable named animalDiv.
@@ -32,9 +32,18 @@ $("button").on("click", function() {
     // Prepend the animalDiv variable to the element with an id of gifs-appear-here.
 
     // ============= put step 3 in between these dashes ======================
+      let animalDiv = $('<div>');
+      let p = $('<p>');
+      p.text(results[i].rating);
+      let animalImage = $('<img>');
+      animalImage.attr("src", results[i].images.fixed_height.url);
+      animalDiv.append(p);
+      animalDiv.append(animalImage);
+      $('#gifs-appear-here').prepend(animalDiv);
+
 
     // ==================================
-    // }
+    }
 
   });
 });
