@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Giphy API</title>
-  </head>
 
-  <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+</head>
 
-    <script type="text/javascript">
-      var APIKEY = "gw3qwHGm3RCLLyKNZsfbAy9ExJFQ39Nm";
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./script.js">
+    // Example queryURL for Giphy API
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 
-      // Example queryURL for Giphy API
-      var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=" + APIKEY;
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    });
+  </script>
 
-      $.ajax({
-        url: queryURL,
-        method: "GET",
-      }).then(function (giphyData) {
-        var gifsArray = giphyData.data;
+</body>
 
-        for (i = 0; i < gifsArray.length; i++) {
-          var currentGif = gifsArray[i];
-          var gifUrl = currentGif.images["480w_still"].url;
-          console.log(gifUrl);
-
-          var image = $("<img>");
-          image.attr("src", gifUrl);
-  
-          $("body").append(image);
-        }
-
-        console.log(gifsArray);
-      });
-    </script>
-  </body>
 </html>
