@@ -16,9 +16,7 @@
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+    }).then(console.log(data));
 // ---------------------------------------------------------
 
     console.log("This console.log will probably happen first because of asynchronicity.");
