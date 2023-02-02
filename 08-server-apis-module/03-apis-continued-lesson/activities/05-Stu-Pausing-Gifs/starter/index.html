@@ -24,8 +24,6 @@
 
       // ============== FILL IN CODE HERE FOR STEP TWO =========================
 
-      // CODE GOES HERE
-
       // =============================================
 
       // STEP THREE: Check if the variable state is equal to 'still',
@@ -36,10 +34,15 @@
       // image to it's data-still value and update the data-state attribute to 'still'
       // ============== FILL IN CODE HERE FOR STEP THREE =========================
 
-      // CODE GOES HERE
+      if ($(this).attr("data-state") === "animate") {
+        $(this).attr("src", $(this).attr("data-still"))
+        $(this).attr("data-state", "still")
+      } else {
+        $(this).attr("src", $(this).attr("data-animate"))
+        $(this).attr("data-state", "animate")
+      }
 
       // ==============================================
-
       // STEP FOUR: open the file in the browser and click on the images.
       // Then click again to pause.
     });
