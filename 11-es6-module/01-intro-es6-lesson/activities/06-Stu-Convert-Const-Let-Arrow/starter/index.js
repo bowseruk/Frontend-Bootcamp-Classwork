@@ -1,10 +1,10 @@
-var $root = document.querySelector("#root");
+const $root = document.querySelector("#root");
 
-var score;
-var targetScore;
+let score;
+let targetScore;
 
-var makeGuess = function() {
-  var $score = document.querySelector("#root p");
+const makeGuess = function() {
+  const $score = document.querySelector("#root p");
   $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
 
   if (score > targetScore) {
@@ -16,7 +16,7 @@ var makeGuess = function() {
   }
 };
 
-var Crystal = function(color) {
+const Crystal = function(color) {
   this.element = document.createElement("div");
   this.element.className = "crystal " + color;
   this.value = 0;
@@ -36,11 +36,11 @@ Crystal.prototype.render = function(target) {
   target.appendChild(this.element);
 };
 
-var crystals = [new Crystal("red"), new Crystal("blue"), new Crystal("green")];
+const crystals = [new Crystal("red"), new Crystal("blue"), new Crystal("green")];
 
-var playRound = function() {
-  var fragment = document.createDocumentFragment();
-  var $score = document.createElement("p");
+const playRound = function() {
+  const fragment = document.createDocumentFragment();
+  const $score = document.createElement("p");
   targetScore = Math.floor(Math.random() * 50) + 25;
   score = 0;
   $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
