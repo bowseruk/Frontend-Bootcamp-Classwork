@@ -1,9 +1,23 @@
 class Character {
+  constructor(name, strength, hitpoints) {
+    if (! name) {
+      throw new Error("no name input!")
+    }
+    this.name = name;
+    if (! strength) {
+      throw new Error("no strength input!")
+    }
+    this.strength = strength;
+    if (! hitpoints) {
+      throw new Error("no hitpoints input!")
+    }
+    this.hitpoints = hitpoints;
+  }
   // method which prints all of the stats for a character
   printStats() {
-    console.log(`Stats for NAME are as following:`);
-    console.log(`Each attack will do STRENGTH damage.`);
-    console.log(`NAME has HITPOINTS hit points remaining!`);
+    console.log(`Stats for ${this.name} are as following:`);
+    console.log(`Each attack will do ${this.strength} damage.`);
+    console.log(`NAME has ${this.hitpoints} hit points remaining!`);
     console.log("------------");
   }
   // method which determines whether or not a character's "hitPoints" are less then zero
