@@ -1,42 +1,38 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import NavTabs from "./NavTabs";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 
-class Portfolio extends Component {
-  state = {
-    currentPage: "Home"
-  };
+function Portfolio() {
+  const [currentPage, setCurrentPage] = useState("Home");
 
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
+  handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   renderPage = () => {
-    if (this.state.currentPage === "Home") {
+    if (currentPage === "Home") {
       return <Home />;
-    } else if (this.state.currentPage === "About") {
+    } else if (currentPage === "About") {
       return <About />;
-    } else if (this.state.currentPage === "Blog") {
+    } else if (currentPage === "Blog") {
       return <Blog />;
     } else {
       return <Contact />;
     }
   };
 
-  render() {
-    return (
-      <div>
-        <NavTabs
-          currentPage={this.state.currentPage}
-          handlePageChange={this.handlePageChange}
-        />
-        {this.renderPage()}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <NavTabs
+        currentPage={currentPage}
+        handlePageChange={this.handlePageChange}
+      />
+      {renderPage()}
+    </div>
+  );
 }
 
 export default Portfolio;
