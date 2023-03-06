@@ -8,11 +8,11 @@ import Contact from "./pages/Contact";
 function Portfolio() {
   const [currentPage, setCurrentPage] = useState("Home");
 
-  handlePageChange = (page) => {
+  const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  renderPage = () => {
+  const renderPage = () => {
     if (currentPage === "Home") {
       return <Home />;
     } else if (currentPage === "About") {
@@ -28,7 +28,7 @@ function Portfolio() {
     <div>
       <NavTabs
         currentPage={currentPage}
-        handlePageChange={this.handlePageChange}
+        handlePageChange={handlePageChange}
       />
       {renderPage()}
     </div>

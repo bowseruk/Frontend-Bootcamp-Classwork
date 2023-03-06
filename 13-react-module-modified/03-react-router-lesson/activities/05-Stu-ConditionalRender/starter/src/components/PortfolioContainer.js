@@ -5,27 +5,19 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 
-class PortfolioContainer extends Component {
-  state = {
-    currentPage: "Home"
+function PortfolioContainer() {
+  const [currentPage, setCurrentPage] = useState("Home");
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
-
-  render() {
-    return (
-      <div>
-        <NavTabs
-          currentPage={this.state.currentPage}
-          handlePageChange={this.handlePageChange}
-        />
-        Based on `this.state.currentPage`, render the appropriate component
-        here.
-      </div>
-    );
-  }
+  return (
+    <div>
+      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      Based on `this.state.currentPage`, render the appropriate component here.
+    </div>
+  );
 }
 
 export default PortfolioContainer;
