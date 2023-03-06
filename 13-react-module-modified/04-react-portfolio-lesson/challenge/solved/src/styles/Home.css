@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+}
+
+.spock-headshot{
+  display: block;
+  margin: 20px;
+  width: 20%;
+  background-color: transparent;
+}
+
+.contact-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-container{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.bio-text{
+    margin: 10px;
+    width: 50vw;
+}
+
+.contact-list{
+    margin-top: 10vh;
+}
+

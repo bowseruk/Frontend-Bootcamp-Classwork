@@ -1,0 +1,22 @@
+.project-gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.project-image{
+    height: 500px;
+}
+
+.project-detail-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    height: 250px;
+}
+
+.project-links{
+    text-align: center;
+}
