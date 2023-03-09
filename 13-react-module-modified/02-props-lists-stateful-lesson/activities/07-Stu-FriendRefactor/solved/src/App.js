@@ -10,13 +10,13 @@ function App() {
   const [friends, setFriends] = useState(friendsData);
 
   const removeFriend = (id) => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
+    // Filter friends for friends with an id not equal to the id being removed
     const newFriends = friends.filter((friend) => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
+    // Set friends equal to the new friends array
     setFriends([...newFriends]);
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over friends and render a FriendCard component for each friend object
   return (
     <Wrapper>
       <Title>Friends List</Title>

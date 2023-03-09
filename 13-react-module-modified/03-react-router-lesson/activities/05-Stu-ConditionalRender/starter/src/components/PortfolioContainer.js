@@ -15,7 +15,7 @@ function PortfolioContainer() {
   return (
     <div>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      Based on `this.state.currentPage`, render the appropriate component here.
+      Based on `currentPage`, render the appropriate component here.
     </div>
   );
 }

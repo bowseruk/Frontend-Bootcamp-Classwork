@@ -10,7 +10,7 @@ In this activity, we will add a "Decrement" button and click handler to the clic
 
 * Open [localhost:3000](http://localhost:3000) in your web browser. This application's starter code is identical to the last example.
 
-* Add code to the `Counter` component to add a `Decrement` button that _decreases_ the value of `this.state.count` by one each time it is clicked.
+* Add code to the `Counter` component to add a `Decrement` button that _decreases_ the value of `count` by one each time it is clicked.
 
 ### Hint
 
