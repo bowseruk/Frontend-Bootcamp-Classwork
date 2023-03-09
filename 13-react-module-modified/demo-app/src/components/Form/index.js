@@ -2,53 +2,67 @@ import React, { useState } from "react";
 import "./style.css";
 
 function Form() {
-  // Here we set two state variables for firstName and lastName using `useState`
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = e.target;
-
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    return name === "firstName" ? setFirstName(value) : setLastName(value);
-  };
+  function handleUsernameChange(event) {
+    setUsername(event.target.value);
+  }
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
+  }
+  function handlePasswordChange(event) {
+    setPassword(event.target.value);
+  }
 
   const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
     // Alert the user their first and last name, clear the inputs
-    alert(`Hello ${firstName} ${lastName}`);
-    setFirstName("");
-    setLastName("");
+    alert(`Hello ${username}`);
+    console.log(`User name: ${username}`);
+    console.log(`Email: ${email}`);
+    console.log(`Password: ${password}`);
+    setUsername("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
-    <div>
-      <p>
-        Hello {firstName} {lastName}
-      </p>
-      <form className="form">
+    <form>
+      <div>
         <input
-          value={firstName}
-          name="firstName"
-          onChange={handleInputChange}
           type="text"
-          placeholder="First Name"
+          name="username"
+          placeholder="Username"
+          value={username}
+          onChange={handleUsernameChange}
         />
+      </div>
+      <div>
         <input
-          value={lastName}
-          name="lastName"
-          onChange={handleInputChange}
           type="text"
-          placeholder="Last Name"
+          name="email"
+          placeholder="Email"
+          value={email}
+          onChange={handleEmailChange}
         />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
-      </form>
-    </div>
+      </div>
+      <div>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={password}
+          onChange={handlePasswordChange}
+        />
+      </div>
+      <button type="button" onClick={handleFormSubmit}>
+        Submit
+      </button>
+    </form>
   );
 }
 
