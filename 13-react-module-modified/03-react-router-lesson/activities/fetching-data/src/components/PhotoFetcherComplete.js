@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function PhotoFetcher() {
+function PhotoFetcherComplete() {
   const [marsPhotoData, setMarsPhotoData] = useState(null);
 
   useEffect(() => {
@@ -16,10 +16,16 @@ function PhotoFetcher() {
   }, []);
 
   if (marsPhotoData) {
-    return <img src={marsPhotoData.photos[0].img_src} alt="Martian surface" />;
+    return (
+      <img
+        src={marsPhotoData.photos[0].img_src}
+        alt="Martian surface"
+        style={{ height: "80vh", margin: "2rem" }}
+      />
+    );
   } else {
-    return null;
+    return <h1>...Loading</h1>;
   }
 }
 
-export default PhotoFetcher;
+export default PhotoFetcherComplete;
