@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FriendCard from './components/FriendCard';
 import Wrapper from './components/Wrapper';
 import Title from './components/Title';
 import friends from './friends.json';
 
 function App() {
+  // Get the state info
+  const [friends, setFriends] = useState(friendsData);
+
+  const removeFriend = id => setFriends([...friends.filter((friend) => friend.id !== id)])
+
   return (
     <Wrapper>
       <Title>Friends List</Title>
+      {friends.map((friend) => (
+        
+      ))}
       <FriendCard
         name={friends[0].name}
         image={friends[0].image}

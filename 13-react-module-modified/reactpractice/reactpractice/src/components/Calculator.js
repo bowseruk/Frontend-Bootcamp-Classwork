@@ -6,9 +6,7 @@ import React from "react";
 // num1, operator, and num2
 // Math should return a span tag displaying the result e.g.  19 + 341 = 360
 function Calculator() {
-  function math(prop) {
-    return ((prop.num1 + (prop.num2 * (prop.operator === "+")) - (prop.num2 * (prop.operator === "-"))) * Math.max(1, prop.num2 * (prop.operator === "*"))) / Math.max(1, prop.num2 * (prop.operator === "/"));
-  }
+    const math = prop => (((prop.num1) + (prop.operator === "+") * prop.num2 - (prop.operator === "-") * prop.num2) * (!(prop.operator === '*') * 1 + (prop.operator === '*') * prop.num2)) / (!(prop.operator === '/') * 1 + (prop.operator === '/') * prop.num2)
   return (
     <div>
       <p>19 + 341 = {math({num1: 19,operator: "+", num2:341})}</p>
